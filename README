@@ -24,7 +24,7 @@ If a device is passed through to a VM, running the suspend script will shut down
 Enabling Services
 To enable the services, follow these steps:
 
-Reload the systemd daemon to recognize the new service files:
+Reload the systemd daemon to recognize the new service files and enable services:
    sudo systemctl daemon-reload
    sudo systemctl enable suspend-vms.service
    sudo systemctl enable resume-vms.service
