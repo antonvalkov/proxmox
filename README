@@ -1,6 +1,5 @@
 Proxmox VM Suspension and Resumption Scripts
-This repository contains two scripts, suspend-vms.sh and resume-vms.sh, designed to manage the suspension and resumption of virtual machines (VMs) on a Proxmox server.
-Also two services to automate suspension and resume during node reboot.
+This repository contains two scripts, suspend-vms.sh and resume-vms.sh, designed to manage the suspension and resumption of virtual machines (VMs) on a Proxmox server.Also two services to automate suspension and resume during node reboot.
 
 Script Locations
 Suspend Script:
