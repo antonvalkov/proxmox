@@ -1,39 +1,30 @@
-# Proxmox VM Suspension and Resumption Scripts
+Proxmox VM Suspension and Resumption Scripts
+This repository contains two scripts, suspend-vms.sh and resume-vms.sh, designed to manage the suspension and resumption of virtual machines (VMs) on a Proxmox server.
 
-This repository contains two scripts, `suspend-vms.sh` and `resume-vms.sh`, designed to manage the suspension and resumption of virtual machines (VMs) on a Proxmox server.
+Script Locations
+Suspend Script:
+Full path: /root/suspend-vms.sh
 
-## Script Locations
+Resume Script:
+Full path: /root/resume-vms.sh
 
-- **Suspend Script**:  
-  Full path: `/root/suspend-vms.sh`
+Service Locations
+Suspend Service:
+Full path: /etc/systemd/system/suspend-vms.service
 
-- **Resume Script**:  
-  Full path: `/root/resume-vms.sh`
+Resume Service:
+Full path: /etc/systemd/system/resume-vms.service
 
-## Service Locations
-
-- **Suspend Service**:  
-  Full path: `/etc/systemd/system/suspend-vms.service`
-
-- **Resume Service**:  
-  Full path: `/etc/systemd/system/resume-vms.service`
-
-## Implementation
-
+Implementation
 These scripts and services should be implemented directly on the Proxmox server. They have been tested on a single-node setup and are not guaranteed to work in a clustered environment.
 
-### Important Note
-
+Important Note
 If a device is passed through to a VM, running the suspend script will shut down that VM. Ensure that you are aware of any passthrough devices before executing the scripts.
 
-## Enabling Services
-
+Enabling Services
 To enable the services, follow these steps:
 
-1. **Reload the systemd daemon** to recognize the new service files:
-
-   ```bash
+Reload the systemd daemon to recognize the new service files:
    sudo systemctl daemon-reload
    sudo systemctl enable suspend-vms.service
    sudo systemctl enable resume-vms.service
-   ```
