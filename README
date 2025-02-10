@@ -36,3 +36,4 @@ To enable the services, follow these steps:
    sudo systemctl daemon-reload
    sudo systemctl enable suspend-vms.service
    sudo systemctl enable resume-vms.service
+   ```
