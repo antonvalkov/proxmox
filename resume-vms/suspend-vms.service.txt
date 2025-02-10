@@ -1,0 +1,10 @@
+[Unit]
+Description=Resume/start VMs after reboot
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/resume-vms.sh
+
+[Install]
+WantedBy=multi-user.target

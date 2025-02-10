@@ -1,0 +1,12 @@
+[Unit]
+Description=Suspend/shutdown VMs before reboot
+DefaultDependencies=no
+Before=shutdown.target reboot.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/suspend-vms.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=shutdown.target reboot.target
